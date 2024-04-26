@@ -1,8 +1,8 @@
 :root{
     --color-one: black;
-    --color-two: rgb(76, 60, 253);
-    --color-three: #8fe953;
-    --color-four: #ffb07c;
+    --color-two: rgb(60, 182, 253);
+    --color-three: #a180fd;
+    --color-four: #e7fc32;
 }
 
 *{
@@ -37,7 +37,7 @@ header {
 /* HEADER */
 header{
     text-align: center;
-    background-color: rgb(255, 236, 236);
+    background-color: rgb(34, 26, 82);
     padding: 15px 0;
     margin: 0%;
 }
@@ -99,7 +99,7 @@ nav a.boton{
     display: inline-block;
     text-decoration: none;
     margin: 0 30px;
-    color: #f5acf2;
+    color: #0b0e31;
     padding: 10px 15px;
     border-radius: 30px;
     background-color: var(--color-four);
@@ -131,7 +131,7 @@ nav a:hover, .loguito:hover{
     font-size: 42px;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: rgb(173, 81, 81);
 }
 
 .encabezado__subtitulo{
@@ -167,7 +167,7 @@ nav a:hover, .loguito:hover{
 }
 
 .titulo {
-    background-color: #55b4fd;
+    background-color: #f02424;
     color: var(--color-three);
     font-size: 20px;
     margin: 0;
@@ -185,7 +185,7 @@ nav a:hover, .loguito:hover{
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border-bottom: 1px solid #b6d9fc;
+    border-bottom: 1px solid #499df1;
     justify-content: space-between;
 }
 
@@ -263,7 +263,7 @@ main{
     max-width: 10%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(28, 25, 25, 0.1);
+    box-shadow: 0 0 10px rgba(247, 132, 132, 0.1);
     border: 8px solid var(--color-one)
 }
 
@@ -271,7 +271,7 @@ main{
     max-width: 12%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(28, 25, 25, 0.1);
+    box-shadow: 0 0 10px rgba(168, 106, 250, 0.1);
     border: 8px solid var(--color-one)
 }
 
