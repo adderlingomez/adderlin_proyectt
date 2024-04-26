@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Apostadores</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url "inicio" %}">
+                <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
+            </a>
+        </div>
+        {% include 'partials/menu.html' %} 
+    </header>
+    <main>
+        {% block content %}
+        <section>
+            <div>
+                <h1 class="subtitulo lista_apostadores_titulo">Aquí encontraras los apostadores registrados</h1>
+                <div class="contenedor_lista_apostadores">
+                            {% for apostador in apostadores %}
+                            <div class="contenedor_apostadores">
+                                <h3>Nombre: {{apostador.nombre_apostador}}</h3> 
+                                <p>Edad: {{apostador.edad}}</p>
+                                <p>ID: {{apostador.id}}</p> 
+                                <a href="{% url "info_apostador" apostador.id %}" class="enlace_apostador">Ver más</a> 
+                                <a href="{% url "eliminar_apostador" apostador.id %}" class="enlace_apostador">Eliminar</a>
+                            </div>
+                            {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endblock content %}
+    </main>
+</body>
+</html>

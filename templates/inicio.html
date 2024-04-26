@@ -1,0 +1,69 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Más informacion</title>
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <a href="{% url "inicio" %}">
+                <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
+            </a>
+        </div>
+        {% include "partials/menu.html" %}
+    </header>
+    <section class="container">
+        
+            <div class="texto-columna">
+                <h2 class="titulo titulo_izquierda">¡Lo que te espera!</h2>
+                <div class="texto-imagen-container">
+                    <div class="texto">
+                        <p>
+                            Paquete de Premios Multijuego "Maestro de Todos los Juegos":
+                            Para los jugadores que disfrutan de una amplia variedad de juegos, ofrecemos el exclusivo paquete de premios "Maestro de Todos los Juegos". Este premio incluye una combinación única de recompensas diseñadas para satisfacer todos los gustos y preferencias de juego.
+                            
+                            Créditos de Juego VIP: Los ganadores recibirán una generosa cantidad de créditos de juego VIP, que pueden utilizar en una variedad de juegos, desde tragamonedas y juegos de mesa hasta póker y apuestas deportivas.
+                            Entradas para Torneos Exclusivos: Los jugadores tendrán acceso garantizado a una serie de torneos exclusivos en diferentes juegos, donde podrán competir por premios en efectivo aún mayores y demostrar sus habilidades contra otros jugadores de alto nivel.
+                            Bonos de Giros Gratis: Se otorgarán bonos de giros gratis en una selección de las mejores tragamonedas del mercado, brindando a los jugadores la oportunidad de ganar grandes premios sin arriesgar su propio dinero.
+                            Experiencia VIP en Casino en Vivo: Los ganadores disfrutarán de una experiencia VIP en nuestra sección de casino en vivo, con acceso a mesas exclusivas y crupieres profesionales que harán que se sientan como auténticos jugadores de casino de alto nivel.
+                            Regalos de Lujo: Además de los premios relacionados con el juego, los ganadores recibirán regalos de lujo, como dispositivos electrónicos de alta gama, artículos de marca y experiencias exclusivas, para completar su experiencia de premio "Maestro de Todos los Juegos".
+                        </p>
+                    
+                    <figure class="imagen">
+                         <img class="foto" src="{% static "imagenes/apuesta7.jpg" %}">
+                    </figure>
+                    </div>
+                </div> 
+            </div> 
+
+       
+            <div class="texto-columna"> 
+                <h2 class="titulo titulo_derecha">¡Concursos!</h2>
+                <div class="texto-imagen-container">
+                    <div class="texto texto-derecha">
+                        <p>
+                            Formato del Concurso: El concurso "Elite Gamer" se llevará a cabo en varias rondas, cada una centrada en un juego diferente de nuestra plataforma, que puede incluir tragamonedas, póker, blackjack, ruleta y más.
+                            Acceso Exclusivo: Solo los jugadores que hayan alcanzado un cierto nivel de lealtad o estatus en nuestra plataforma tendrán acceso al concurso "Elite Gamer", lo que garantiza que solo los jugadores más comprometidos y habilidosos compitan.
+                            Desafíos Especializados: Cada ronda del concurso presenta desafíos únicos y especializados en el juego correspondiente. Los participantes deberán demostrar su destreza, estrategia y habilidades para avanzar y ganar premios.
+                            Premios Exclusivos: Los ganadores de cada ronda serán recompensados con premios exclusivos, que pueden incluir créditos de juego adicionales, bonificaciones especiales, regalos de lujo y acceso privilegiado a eventos futuros.
+                            Gran Final y Gran Premio: Después de varias rondas de competencia, los mejores jugadores se enfrentarán en una gran final épica. El ganador de la gran final será coronado como el "Elite Gamer" y recibirá un gran premio en efectivo, junto con el reconocimiento especial de la comunidad de jugadores.
+                            Este concurso exclusivo ofrece a los jugadores la oportunidad de mostrar sus habilidades en una variedad de juegos mientras compiten por emocionantes premios y el título de "Elite Gamer". Es una experiencia única que celebra la diversidad de juegos y la excelencia en el juego en nuestra plataforma.
+                        </p>
+                    
+                    <figure class="imagen">
+                        <img class="foto2" src="{% static "imagenes/apuesta20.jpg" %}">
+                    </figure> 
+                    </div>
+                </div>     
+            </div>
+    
+     
+    </section>
+   
+</body>

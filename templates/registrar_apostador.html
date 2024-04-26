@@ -1,0 +1,40 @@
+{% load static %} <!--Esta línea carga los archivos estáticos, como hojas de estilo CSS, JavaScript e imágenes, para su uso en la página.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"> 
+            <a href="{% url "inicio" %}"> <!-- Este enlace dirige al usuario a la página de inicio del sitio web. Utiliza la directiva de plantilla -->
+                <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
+            </a>
+        </div>
+        {% include "partials/menu.html" %}
+    </header>
+
+    <div class="form_texto">
+            <h1 class="subtitulo form_titulo">Registra al apostador</h1>
+            <div class="form_p">
+                <form method="POST" class="formulario">
+                    {% csrf_token %}
+                    {{formulario}}
+                    <div>
+                        <button class="botoncito" type="submit">Registrar</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+
+</body>
+
+</html>

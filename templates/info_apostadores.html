@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Más informacion</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="{% url "inicio" %}">
+                <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
+            </a>
+        </div>
+        {% include 'partials/menu.html' %}
+    </header>
+    
+    <main>
+        <div class="contenedor_info_apostadores">
+            <h1 class="subtitulo info_apostadores">Caracteristicas de los jugadores</h1>
+            <div class="info_cuadro">
+                <div>
+                    <p>
+                        <strong class="subtitulo">Apostador: {{ apostador.nombre_apostador }}</strong> 
+                    </p>
+                    <p>
+                        <strong class="subtitulo">Juegos: {{ apostador.caracteristica_apostadores.numero_juegos }}</strong> 
+                    </p>
+                    <p>
+                        <strong class="subtitulo">Veces perdidas: {{ apostador.caracteristica_apostadores.veces_perdi }}</strong> 
+                    </p>
+                </div>
+            </div>
+            <a href="{% url "lista_apostadores" %}" class="link">Volver</a>
+        </div>
+    </main>
+
+</body>
+</html>
