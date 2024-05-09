@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Lo mejor de super apuestas</title>
+</head>
+
+<body>
+
+    <div class="form_texto">
+            <h1 class"subtitulo form_titulo">iniciar sesion</h1>
+            <div class"form_p">
+                <form method='POST' class="formulario">
+                    {% csrf_token %}
+                    {{formulario}}
+                    <div>
+                        <button class="botoncito" type="submit">ingresar</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+</body>
+</html>
