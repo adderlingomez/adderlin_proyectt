@@ -14,25 +14,25 @@
 
     <header>
         <div class="logo"> 
-            <a href="{% url "inicio" %}"> 
+            <a href="{% url 'inicio' %}">
                 <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
             </a>
         </div>
-        {% include "partials/menu.html" %}
+        
     </header>
-
-    <div class="form_texto">
-            <h1 class="subtitulo form_titulo">Registra las características del apostador</h1>
+        <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta44.jpg" %}');">
+        <div class="form_texto">
+            <h1 class="subtitulo form_titulo"  ><mark class='color-mark'>Registra las características del apostador</mark></h1>
             <div class="form_p">
                 <form method="POST" class="formulario">
                     {% csrf_token %}
-                    {{formulario}}
+                    {{ form.as_p }}
                     <div>
                         <button class="botoncito" type="submit">Registrar</button>
                     </div>
                 </form>
             </div>
-    </div>
+        </div>
 
 
 </body>

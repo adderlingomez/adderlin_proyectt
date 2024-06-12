@@ -8,89 +8,112 @@
     <link rel="stylesheet" href="{% static 'main.css' %}">
     <title>Lo mejor de super apuestas</title>
 </head>
-
 <body>
     <header>
-        <div class="logo"> 
-            <a href="{% url "inicio" %}">
+        <div class="logo">
+            <a href="{% url "inicio" %}"> 
                 <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
             </a>
         </div>
         {% include "partials/menu.html" %} 
     </header>
-    <main>
-        <div class="container-lo_mejor">
-            <h2 class="subtitulo proposito">¿Guía Definitiva para Maximizar tus Ganancias: Estrategias y Consejos Clave en el Mundo de las Apuestas en Línea?</h2>
-            <p class="proposito">
-                "¡Desata tu Pasión por la Emoción y Gana en Grande! Descubre las Increíbles Oportunidades de Apuestas que te Esperan"
+    <section class='home'>
+        <main>
+            <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta25.jpg" %}');"> 
+               
+                <div class="texto-imagen-container">
+                    <div class="texto texto-derecha1">
+                                   
+                        
+                        <p>
+                            <h2 class="subtitulo proposito"><mark class='color-mark'>¿Guía Definitiva para Maximizar tus Ganancias: Estrategias y Consejos Clave en el Mundo de las Apuestas en Línea?</mark></h2>
+                                <mark class='color-mark'>
+                                    Variedad de Juegos: Desde tragamonedas hasta póker en vivo, las plataformas de apuestas ofrecen una amplia gama de juegos para todos los gustos y habilidades.
+                                    Bonos de Bienvenida: Muchas páginas de apuestas ofrecen bonificaciones atractivas para nuevos jugadores, que pueden incluir dinero extra para apostar, giros gratis en tragamonedas u otras recompensas.
+                                    Programas de Fidelidad: Algunas plataformas premian la lealtad de sus jugadores con programas de fidelización que ofrecen recompensas, bonos adicionales y otras ventajas exclusivas.
+                                    Apuestas en Vivo: La emoción de las apuestas en tiempo real añade una dimensión adicional de emoción. Los jugadores pueden participar en apuestas deportivas en vivo o en mesas de casino con crupieres en directo.
+                                    Torneos y Competencias: Muchas páginas organizan torneos y competiciones periódicas donde los jugadores pueden demostrar sus habilidades y competir por premios en efectivo u otros premios atractivos.
+                                    Apuestas Deportivas: La variedad de deportes y eventos disponibles para apostar es impresionante. Desde los deportes más populares como el fútbol y el baloncesto hasta deportes menos convencionales, hay opciones para todos los gustos.
+                                    Flexibilidad y Comodidad: Las plataformas de apuestas en línea ofrecen la conveniencia de poder jugar desde cualquier lugar y en cualquier momento a través de dispositivos móviles o computadoras, lo que brinda una experiencia de juego flexible.
+                                    Análisis de Datos y Estadísticas: Muchas plataformas proporcionan herramientas y análisis detallados para ayudar a los jugadores a tomar decisiones informadas al apostar, lo que puede aumentar sus posibilidades de éxito.
+                                </mark>
+                            </h2>
+                        </p>
+                   
+                         
+                    </div>
+                </div>
+
+            </div>
+                <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta30.jpg" %}');">
+                    <h2 class="titulo titulo_derecha"></h2>
+                    <div class="texto-imagen-container">
+                        <div class="texto texto-derecha">
+                            <h2 class="subtitulo proposito"><mark class='color-mark'>Beneficios por jugar en nuestro sitio</mark></h2>
+                            <p>
+                                <mark class='color-mark'>
+                                    Entretenimiento y Diversión: Las apuestas en línea ofrecen una experiencia de entretenimiento emocionante y emocionante para los jugadores, que pueden disfrutar de una amplia variedad de juegos y actividades.
+                                    Accesibilidad: Las plataformas de apuestas en línea están disponibles las 24 horas del día, los 7 días de la semana, lo que permite a los jugadores acceder a sus juegos favoritos en cualquier momento y desde cualquier lugar con una conexión a Internet.
+                                    Variedad de Juegos: Desde tragamonedas y juegos de mesa hasta apuestas deportivas y póker, las opciones de juegos en línea son casi ilimitadas, lo que garantiza que haya algo para todos los gustos y preferencias.
+                                    Bonificaciones y Promociones: Muchas plataformas de apuestas ofrecen bonificaciones de bienvenida, promociones periódicas y programas de recompensas que pueden ayudar a los jugadores a maximizar sus ganancias y disfrutar de más tiempo de juego.
+                                    Comodidad: La capacidad de jugar desde la comodidad del hogar o mientras se está en movimiento a través de dispositivos móviles brinda una gran conveniencia a los jugadores, eliminando la necesidad de viajar a un casino físico.
+                                    Control de Presupuesto: Las plataformas de apuestas en línea permiten a los jugadores establecer límites de depósito, límites de pérdida y límites de tiempo de juego, lo que les ayuda a mantener un control efectivo de su presupuesto y a jugar de manera responsable.
+                                    Privacidad y Seguridad: Las plataformas de apuestas en línea suelen estar equipadas con medidas de seguridad avanzadas para proteger la información personal y financiera de los jugadores, brindándoles tranquilidad mientras disfrutan de sus juegos favoritos.
+                                    Oportunidades de Aprendizaje: Las plataformas de apuestas en línea ofrecen una variedad de recursos educativos, tutoriales y herramientas de análisis que pueden ayudar a los jugadores a mejorar sus habilidades y estrategias de juego.
+                                </mark>
+                            </p>
+                                
+                        </div>    
+                    </div>
+                </div>
 
 
+            <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta39.jpg" %}');">
+                
+                <div class="texto-imagen-container">  
+                    <div class="texto texto-derecha">
+                        <h2 class="subtitulo proposito"><mark class='color-mark'>Premios exclusivos</mark></h2>
+                        <p>
+                            <mark class='color-mark'>
+                                Viajes de Lujo: Algunas plataformas de apuestas ofrecen la oportunidad de ganar viajes exclusivos a destinos de ensueño, que pueden incluir estadías en resorts de lujo, cruceros por el Caribe o experiencias de safari en África.
+                                Eventos VIP: Los jugadores pueden ser invitados a eventos VIP exclusivos, como conciertos de artistas famosos, eventos deportivos de primer nivel o cenas gourmet en restaurantes de alta cocina.
+                                Productos de Alta Gama: Se pueden otorgar premios exclusivos, como dispositivos electrónicos de última generación, joyería de diseñador, vehículos de lujo o artículos de colección, a los jugadores más destacados.
+                                Experiencias Únicas: Algunas plataformas ofrecen premios en forma de experiencias únicas, como clases de cocina con chefs famosos, sesiones de spa de lujo o tours privados por lugares históricos.
+                                Acceso a Torneos VIP: Los jugadores pueden recibir acceso exclusivo a torneos y competiciones VIP, donde compiten por premios en efectivo aún mayores y tienen la oportunidad de enfrentarse a los mejores jugadores del mundo.
+                                Servicio de Conserjería: Los jugadores de alto nivel pueden recibir servicios de conserjería personalizados, que incluyen asistencia para reservar viajes, realizar reservas en restaurantes exclusivos o adquirir entradas para eventos especiales.
+                                Regalos Personalizados: Algunas plataformas premian a sus jugadores más leales con regalos personalizados, como artículos de merchandising exclusivos, obras de arte firmadas o productos personalizados.
+                                Créditos y Bonificaciones Exclusivas: Los jugadores VIP pueden recibir créditos de juego adicionales, bonificaciones exclusivas y recompensas especiales como parte de programas de fidelización de alto nivel.
+                            </mark>
+                        </p>
 
+                        
+                        
+                    </div>    
+                </div>
+            </div>
+                    
 
-            </p>
-        </div>
+            <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta40.jpg" %}');">
+                
+                <div class="texto-imagen-container">  
+                    <div class="texto texto-derecha">
 
-        <div class="container_proposito">
-            <section class="">
-
+                        <h2 class="subtitulo proposito"><mark class='color-mark'>Pases premium y beneficios</mark></h2>
+                        <p>
+                            <mark class='color-mark'>
+                                Suite VIP en un Evento Deportivo de Prestigio:
+                                Los jugadores premium tienen la oportunidad de ganar una experiencia inolvidable al recibir una suite VIP en un evento deportivo de alto nivel. 
+                                Este premio exclusivo incluye acceso privilegiado a un palco privado con comodidades de lujo, como servicio de catering gourmet, bebidas premium y vistas privilegiadas del evento. 
+                                Los jugadores premium pueden disfrutar del partido o evento en compañía de amigos y familiares, creando recuerdos inolvidables mientras disfrutan de la emoción del deporte en un ambiente exclusivo y elegante.
+                            </mark>
+                        </p>
+>                   </div>
+                </div>                  
+            </div>     
             
-                <h3 class="subtitulo proposito-h2">Oportunidades en las apuestas</h3>
-                <p class="parrafo">
-                Variedad de Juegos: Desde tragamonedas hasta póker en vivo, las plataformas de apuestas ofrecen una amplia gama de juegos para todos los gustos y habilidades.
-                Bonos de Bienvenida: Muchas páginas de apuestas ofrecen bonificaciones atractivas para nuevos jugadores, que pueden incluir dinero extra para apostar, giros gratis en tragamonedas u otras recompensas.
-                Programas de Fidelidad: Algunas plataformas premian la lealtad de sus jugadores con programas de fidelización que ofrecen recompensas, bonos adicionales y otras ventajas exclusivas.
-                Apuestas en Vivo: La emoción de las apuestas en tiempo real añade una dimensión adicional de emoción. Los jugadores pueden participar en apuestas deportivas en vivo o en mesas de casino con crupieres en directo.
-                Torneos y Competencias: Muchas páginas organizan torneos y competiciones periódicas donde los jugadores pueden demostrar sus habilidades y competir por premios en efectivo u otros premios atractivos.
-                Apuestas Deportivas: La variedad de deportes y eventos disponibles para apostar es impresionante. Desde los deportes más populares como el fútbol y el baloncesto hasta deportes menos convencionales, hay opciones para todos los gustos.
-                Flexibilidad y Comodidad: Las plataformas de apuestas en línea ofrecen la conveniencia de poder jugar desde cualquier lugar y en cualquier momento a través de dispositivos móviles o computadoras, lo que brinda una experiencia de juego flexible.
-                Análisis de Datos y Estadísticas: Muchas plataformas proporcionan herramientas y análisis detallados para ayudar a los jugadores a tomar decisiones informadas al apostar, lo que puede aumentar sus posibilidades de éxito.
-                </p>
-                <figure class="imagen-container">
-                    <img class="imagen1" src="{% static "imagenes/apuesta1.jpg" %}">
-                </figure>
-            </section>
-            <h3 class="subtitulo proposito-h2">Beneficios por jugar en nuestro sitio</h3>
-            <p class="parrafo">
-                Entretenimiento y Diversión: Las apuestas en línea ofrecen una experiencia de entretenimiento emocionante y emocionante para los jugadores, que pueden disfrutar de una amplia variedad de juegos y actividades.
-                Accesibilidad: Las plataformas de apuestas en línea están disponibles las 24 horas del día, los 7 días de la semana, lo que permite a los jugadores acceder a sus juegos favoritos en cualquier momento y desde cualquier lugar con una conexión a Internet.
-                Variedad de Juegos: Desde tragamonedas y juegos de mesa hasta apuestas deportivas y póker, las opciones de juegos en línea son casi ilimitadas, lo que garantiza que haya algo para todos los gustos y preferencias.
-                Bonificaciones y Promociones: Muchas plataformas de apuestas ofrecen bonificaciones de bienvenida, promociones periódicas y programas de recompensas que pueden ayudar a los jugadores a maximizar sus ganancias y disfrutar de más tiempo de juego.
-                Comodidad: La capacidad de jugar desde la comodidad del hogar o mientras se está en movimiento a través de dispositivos móviles brinda una gran conveniencia a los jugadores, eliminando la necesidad de viajar a un casino físico.
-                Control de Presupuesto: Las plataformas de apuestas en línea permiten a los jugadores establecer límites de depósito, límites de pérdida y límites de tiempo de juego, lo que les ayuda a mantener un control efectivo de su presupuesto y a jugar de manera responsable.
-                Privacidad y Seguridad: Las plataformas de apuestas en línea suelen estar equipadas con medidas de seguridad avanzadas para proteger la información personal y financiera de los jugadores, brindándoles tranquilidad mientras disfrutan de sus juegos favoritos.
-                Oportunidades de Aprendizaje: Las plataformas de apuestas en línea ofrecen una variedad de recursos educativos, tutoriales y herramientas de análisis que pueden ayudar a los jugadores a mejorar sus habilidades y estrategias de juego.
-            </p>
-            <figure class="imagen-container">
-                <img class="imagen1" src="{% static "imagenes/apuesta4.jpg" %}">
-            </figure>
-
-            <h3 class="subtitulo proposito-h2">Premios exclusivos</h3>
-            <p class="parrafo">
-                Viajes de Lujo: Algunas plataformas de apuestas ofrecen la oportunidad de ganar viajes exclusivos a destinos de ensueño, que pueden incluir estadías en resorts de lujo, cruceros por el Caribe o experiencias de safari en África.
-                Eventos VIP: Los jugadores pueden ser invitados a eventos VIP exclusivos, como conciertos de artistas famosos, eventos deportivos de primer nivel o cenas gourmet en restaurantes de alta cocina.
-                Productos de Alta Gama: Se pueden otorgar premios exclusivos, como dispositivos electrónicos de última generación, joyería de diseñador, vehículos de lujo o artículos de colección, a los jugadores más destacados.
-                Experiencias Únicas: Algunas plataformas ofrecen premios en forma de experiencias únicas, como clases de cocina con chefs famosos, sesiones de spa de lujo o tours privados por lugares históricos.
-                Acceso a Torneos VIP: Los jugadores pueden recibir acceso exclusivo a torneos y competiciones VIP, donde compiten por premios en efectivo aún mayores y tienen la oportunidad de enfrentarse a los mejores jugadores del mundo.
-                Servicio de Conserjería: Los jugadores de alto nivel pueden recibir servicios de conserjería personalizados, que incluyen asistencia para reservar viajes, realizar reservas en restaurantes exclusivos o adquirir entradas para eventos especiales.
-                Regalos Personalizados: Algunas plataformas premian a sus jugadores más leales con regalos personalizados, como artículos de merchandising exclusivos, obras de arte firmadas o productos personalizados.
-                Créditos y Bonificaciones Exclusivas: Los jugadores VIP pueden recibir créditos de juego adicionales, bonificaciones exclusivas y recompensas especiales como parte de programas de fidelización de alto nivel.
-            </p>
-            <figure class="imagen-container">
-                <img class="imagen1" src="{% static "imagenes/apuesta5.jpg" %}">
-            </figure>
-
-            <h3 class="subtitulo proposito-h2">Pases premium y beneficios</h3>
-            <p class="parrafo">
-                Suite VIP en un Evento Deportivo de Prestigio:
-                Los jugadores premium tienen la oportunidad de ganar una experiencia inolvidable al recibir una suite VIP en un evento deportivo de alto nivel. Este premio exclusivo incluye acceso privilegiado a un palco privado con comodidades de lujo, como servicio de catering gourmet, bebidas premium y vistas privilegiadas del evento. Los jugadores premium pueden disfrutar del partido o evento en compañía de amigos y familiares, creando recuerdos inolvidables mientras disfrutan de la emoción del deporte en un ambiente exclusivo y elegante.
-
-            </p>
-            <figure class="imagen-container">
-                <img class="imagen2" src="{% static "imagenes/apuesta6.jpg" %}">
-            </figure>
-        </div>
-    </main> 
-
+       
+               
+        </main>
+    </section>
 </body>
-
 </html>

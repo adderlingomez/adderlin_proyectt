@@ -20,20 +20,47 @@
         </div>
         {% include "partials/menu.html" %}
     </header>
-
+    <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta43.jpg" %}');">
     <div class="form_texto">
-            <h1 class="subtitulo form_titulo">Registra al apostador</h1>
-            <div class="form_p">
-                <form method="POST" class="formulario">
-                    {% csrf_token %}
-                    {{formulario}}
-                    <div>
-                        <button class="botoncito" type="submit">Registrar</button>
-                    </div>
-                </form>
-            </div>
+        <h1 class="subtitulo form_titulo"><mark class='color-mark'>Registra al apostador</mark></h1>
+        <div class="form_p">
+            <form action="{% url "registrar_apostadores"%}" method="POST" class="formulario" onsubmit="return validateForm()">
+                {% csrf_token %}
+                {{formulario.as_p}}
+                <div>
+                    <button class="botoncito" type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
     </div>
 
+    <script>
+        function validateForm() {
+            const nameField = document.querySelector('[name="nombre"]'); // Cambia esto por el nombre real del campo en tu formulario
+            const ageField = document.querySelector('[name="edad"]'); // Cambia esto por el nombre real del campo en tu formulario
+
+            const name = nameField.value.trim();
+            const age = ageField.value.trim();
+
+            // Validación del nombre: no debe estar vacío y debe contener solo letras
+            if (!name || !/^[a-zA-Z\s]+$/.test(name)) {
+                alert("Por favor, ingrese un nombre válido. Solo se permiten letras y espacios.");
+                nameField.focus();
+                return false;
+            }
+
+            // Validación de la edad: debe ser un número mayor o igual a 18
+            const ageNumber = parseInt(age, 10);
+            if (isNaN(ageNumber) || ageNumber < 18) {
+                alert("Debe tener al menos 18 años para registrarse.");
+                ageField.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 
 </body>
 

@@ -1,10 +1,8 @@
 from django.contrib import admin
+from .models import Apostador, CaracteristicaApostador, ActualizacionApostador
 
 # Register your models here.
-from .models import *
+admin.site.register(Apostador)
+admin.site.register(CaracteristicaApostador)
+admin.site.register(ActualizacionApostador)
 
-
-
-# Register your models here.
-admin.site.register(apostadores)
-admin.site.register(Caracteristica_apostadores)

@@ -1,21 +1,32 @@
 :root{
     --color-one: black;
-    --color-two: rgb(60, 182, 253);
-    --color-three: #a180fd;
-    --color-four: #e7fc32;
+    --color-two: rgb(253, 253, 255);
+    --color-three: #fbfffb;
+    --color-four: rgb(10, 2, 2);
 }
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     transition: 0.5s;
+    
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
 }
 
 body{
     text-align: justify;
     font-family: "Poppins", sans-serif;
+    font-family: Arial, sans-serif;
+ 
+ 
+   
 }
 
 header {
@@ -37,9 +48,12 @@ header {
 /* HEADER */
 header{
     text-align: center;
-    background-color: rgb(34, 26, 82);
+   
     padding: 15px 0;
     margin: 0%;
+    height: var(--altura_header);
+    
+   
 }
 
 .div_navegacion{
@@ -95,16 +109,17 @@ header{
     color: var(--color-three);
 }
 
-nav a.boton{
-    display: inline-block;
-    text-decoration: none;
-    margin: 0 30px;
-    color: #0b0e31;
-    padding: 10px 15px;
-    border-radius: 30px;
-    background-color: var(--color-four);
-    transition: background-color 0.3 ease;
+nav a.boton {
+    display: inline-block; /* Permite que el enlace tenga dimensiones y respete márgenes y padding */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    margin: 0 30px; /* Aplica un margen de 0px arriba y abajo, y 30px a los lados */
+    color: #0b0e31; /* Establece el color del texto del enlace a un tono oscuro de azul */
+    padding: 10px 15px; /* Añade un espacio interno de 10px arriba y abajo, y 15px a los lados */
+    border-radius: 30px; /* Redondea las esquinas del enlace, dándole un aspecto de píldora */
+    background-color: var(--color-four); /* Establece el color de fondo usando una variable CSS */
+    transition: background-color 0.3s ease; /* Aplica una transición suave al cambiar el color de fondo, durando 0.3 segundos */
 }
+
 
 
 nav a:hover, .loguito:hover{
@@ -149,73 +164,7 @@ nav a:hover, .loguito:hover{
     padding: 10px 20px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
 
-.texto-columna {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 25px;
-    overflow: hidden;
-    width: 80%;
-}
-
-.titulo {
-    background-color: #f02424;
-    color: var(--color-three);
-    font-size: 20px;
-    margin: 0;
-    padding: 15px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-}
-
-.texto-imagen-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.texto {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border-bottom: 1px solid #499df1;
-    justify-content: space-between;
-}
-
-.imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.foto {
-    width: 43%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.foto2{
-    width: 46%;
-    height: auto;
-    border-radius: 10px;
-
-}
-
-.titulo-izquierda {
-    border-radius: 10px 0 0 0;
-}
-
-.titulo-derecha {
-    border-radius: 0 10px 0 0;
-}
 
 /* FIN INICIO */
 /* IMPORTANCIA */
@@ -258,105 +207,41 @@ main{
     margin-top: 20px;
 }
 
-.imagen1{
-    margin-top: -38px;
-    max-width: 10%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(247, 132, 132, 0.1);
-    border: 8px solid var(--color-one)
-}
 
-.imagen2{
-    max-width: 12%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(168, 106, 250, 0.1);
-    border: 8px solid var(--color-one)
-}
 
 /*FIN IMPORTANCIA*/
+
+
+
+
+
+
+
 /* HISTORIA */
 
-.parrafo_historia{
-    margin: 15px;
-    text-align: center;
-    font-size: unset;
-}
 
-.div{
+
+
+
+.texto1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 2;
+    padding: 25px;
+    border-bottom: 1px solid #499df1;
+    justify-content: space-between;
 }
 
-.imagen_1{
-    max-width: 20%;
-    height: auto;
-    border-radius: 5px;
-}
 
-.imagen_3{
-    max-width: 19%;
-    height: auto;
-    border-radius: 5px;
-}
 
-.imagen__2{
-    max-width: 135px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagen_4{
-    max-width: 12rem;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagen__1, .imagene3{
-    max-width: 199px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagen__3{
-    max-width: 250px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagen__4{
-    max-width: 120px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagens1{
-    max-width: 230px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagens2{
-    max-width: 155px;
-    height: auto;
-    border-radius: 2px;
-}
-
-.imagene2{
-    max-width: 140px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.imagene4{
-    max-width: 272px;
-    height: auto;
-    border-radius: 5px;
-}
 
 /*FIN HISTORIA*/
+
+
+
+
+
+
+
 /* LISTA APOSTADORES */
 
 
@@ -552,4 +437,406 @@ div input:focus{
 
 .info_apostadores{
     margin-bottom: 32px;
+}
+
+
+/*new css*/
+/* General Styles */
+/* Reset CSS */
+
+.texto-imagen-container{
+  
+   
+    border: 1px solid #fff;
+    border-radius: 25px;
+    margin: 110;
+    padding: 150px;
+    min-width: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para hacer el texto más distinguible */
+    text-align: center center;
+}   
+
+.texto {
+    color: #f5f7f7; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    word-spacing: 2px; /* Espaciado entre palabras */
+    text-shadow: 1px 1px 1px rgba(252, 251, 251, 0.5); /* Sombra de texto */
+    line-height: 1.6;/* Aumenta la altura de línea para mejorar la legibilidad */
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    text-shadow: 22px 22px 42px rgba(252, 251, 251, 0.7); /* Sombra para hacer el texto más distinguible */
+    margin-bottom: 0%;
+    min-width: 50px;
+    text-align: center center;
+    z-index: -122;
+}
+
+
+
+.color-mark{
+    background-color: rgb(253, 253, 253);
+    color: rgb(12, 3, 3); /* Color del texto */
+    line-height: 1.6;
+    flex: 0;
+    padding: 1px;
+    margin: 5px;
+    min-width: 250;
+    margin-bottom: 0;
+}
+
+/* Estilos para el contenedor */
+.boton-play-texto {
+    padding: 20px; /* Ajuste el espaciado interno */
+    margin-bottom: 20px; /* Ajuste el margen inferior */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Estilos para el botón */
+.play_boton {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra */
+    transition: 0.3s; /* Transición suave */
+}
+
+.play_boton:hover {
+    background-color: #005f6b; /* Color más oscuro en hover */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Sombra en hover */
+}
+
+/* Estilos para el párrafo */
+.parraf {
+    letter-spacing: 1px; /* Espaciado entre letras */
+    word-spacing: 2px; /* Espaciado entre palabras */
+    margin-bottom: 20px; /* Ajuste el margen inferior */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+}
+
+
+
+.texto-imagen-container1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px; /* Ajuste el margen inferior */
+    height: 100vh; /* Por ejemplo, altura completa de la vista */
+    /* O puedes usar una altura mínima */
+    min-height: 500px; /* Ajusta esto según tus necesidades */
+}
+
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*  pie de pagina */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-column p, .footer-column ul, .footer-column li, .footer-column a {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links svg {
+    width: 35px;
+    height: 35px;
+    fill: #ccc;
+    transition: fill 0.3s ease;
+}
+
+.social-links svg:hover {
+    fill: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    font-size: 12px;
+}
+
+
+/*  styles icons */
+
+.social-links svg {
+    margin-right: 10px; /* Ajusta este valor según tu preferencia */
+    
+}
+
+/*  html politicas */
+main.politica {
+    padding: 20px;
+}
+
+main.politica h1, 
+main.politica h2 {
+    color: #333;
+}
+
+main.politica section {
+    margin-bottom: 30px;
+}
+
+main.politica ul {
+    list-style: none;
+    padding: 0;
+}
+
+main.politica ul li {
+    margin-bottom: 10px;
+}
+
+main.politica p {
+    margin-bottom: 10px;
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+ /* texto */
+
+ .text-overlay {
+    position: relative;
+    color: rgb(66, 30, 196); /* Color del texto */
+}
+
+.text-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    z-index: -12; /* Coloca la capa detrás del texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el formulario de inicio de sesión */
+.btn-actualizar:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #218838;
+}
+
+
+/* Contenedor principal del formulario */
+.form-actualizar-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Encabezado del formulario */
+.form-actualizar-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* Estilos del formulario */
+.form-actualizar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Grupos de campos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Etiquetas e inputs del formulario */
+.form-group label {
+    font-weight: bold;
+    color: #555555;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+/* Botón de actualización */
+.btn-actualizar {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-actualizar:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Contenedor principal del formulario de inicio de sesión */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Encabezado del formulario */
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+/* Mensaje de error */
+.login-container .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilos del formulario de inicio de sesión */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etiquetas e inputs del formulario */
+.login-form label {
+    font-weight: bold;
+    color: #555555;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
 }

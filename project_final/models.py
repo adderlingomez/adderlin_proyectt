@@ -1,26 +1,36 @@
 from django.db import models
 from django.utils import timezone
 
-
-# Create your models here.
-
-#modelo principal de la base de datos que incluye una foto
-class apostadores(models.Model):
-    nombre_apostador = models.CharField(max_length=100)
-    edad = models.IntegerField(null= True)
-    fecha_inscripcion = models.DateField(default=timezone.now)
-    foto = models.ImageField(null = True, blank=True)
+class Apostador(models.Model):
+    """
+    Modelo principal de la base de datos que incluye una foto.
+    """
+    nombre = models.CharField(max_length=100)
+    edad = models.IntegerField()
+    foto = models.ImageField(upload_to='apostadores/', blank=True)
 
     def __str__(self):
-      return self.nombre_apostador
+        return self.nombre
 
+class CaracteristicaApostador(models.Model):
+    """
+    Modelo para almacenar las características de un apostador.
+    """
+    apostador = models.OneToOneField(Apostador, on_delete=models.CASCADE, related_name='caracteristica')
+    numero_juegos = models.IntegerField(default=0)
+    ganadas_del_apostador = models.IntegerField(default=0)
 
-
-class Caracteristica_apostadores(models.Model):
-    numero_juegos = models.IntegerField(default=0) #especifica el valor por defecto si se intenta ingresar un valor vacio
-    veces_perdi = models.IntegerField()
-    apostador = models.OneToOneField(apostadores, on_delete=models.CASCADE)
-  
     def __str__(self):
-        return self.numero_juegos
+        return f"{self.numero_juegos} juegos, {self.apostador.ganadas_del_apostador} ganadas"
 
+class ActualizacionApostador(models.Model):
+    """
+    Modelo para registrar actualizaciones de un apostador.
+    """
+    apostador = models.ForeignKey(Apostador, on_delete=models.CASCADE, related_name='actualizaciones')
+    ganadas = models.IntegerField(default=0)
+    perdidas = models.IntegerField(default=0)
+    fecha_actualización = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Ganadas: {self.ganadas}, Perdidas: {self.perdidas}"

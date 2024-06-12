@@ -9,7 +9,7 @@
     <title>Más informacion</title>
 </head>
 <body>
-
+ 
     <header>
         <div class="logo">
             <a href="{% url "inicio" %}">
@@ -18,23 +18,27 @@
         </div>
         {% include 'partials/menu.html' %}
     </header>
-    
+    <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta44.jpg" %}');">
     <main>
         <div class="contenedor_info_apostadores">
             <h1 class="subtitulo info_apostadores">Caracteristicas de los jugadores</h1>
             <div class="info_cuadro">
                 <div>
                     <p>
-                        <strong class="subtitulo">Apostador: {{ apostador.nombre_apostador }}</strong> 
+                        <strong class="subtitulo">Apostador: {{ apostador.nombre }}</strong> 
                     </p>
                     <p>
-                        <strong class="subtitulo">Juegos: {{ apostador.caracteristica_apostadores.numero_juegos }}</strong> 
+                        <strong class="subtitulo">Juegos: {{ apostador.caracteristica.numero_juegos }}</strong> 
                     </p>
                     <p>
-                        <strong class="subtitulo">Veces perdidas: {{ apostador.caracteristica_apostadores.veces_perdi }}</strong> 
+                        <strong class="subtitulo">Veces ganadas: {{ apostador.caracteristica.ganadas_del_apostador }}</strong> 
                     </p>
                 </div>
             </div>
+
+            
+            <a href="{% url 'actualizar_apostador' apostador.id %}" class='link actualizar'>Actualizar</a>
+
             <a href="{% url "lista_apostadores" %}" class="link">Volver</a>
         </div>
     </main>

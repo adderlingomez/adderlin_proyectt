@@ -15,23 +15,25 @@
                 <img src="{% static "imagenes/logo.png" %}" alt="logo" class="imagen_logo">
             </a>
         </div>
-        {% include 'partials/menu.html' %} 
+        {% include 'partials/menu.html' %}
     </header>
+    
     <main>
         {% block content %}
         <section>
             <div>
-                <h1 class="subtitulo lista_apostadores_titulo">Aquí encontraras los apostadores registrados</h1>
+                <div class="texto-imagen-container" style="background-image: url('{% static "imagenes/apuesta41.jpg" %}');">
+                <h1 class="subtitulo lista_apostadores_titulo"><mark class='color-mark'>Aquí encontrarás los apostadores registrados</mark></h1>
                 <div class="contenedor_lista_apostadores">
-                            {% for apostador in apostadores %}
-                            <div class="contenedor_apostadores">
-                                <h3>Nombre: {{apostador.nombre_apostador}}</h3> 
-                                <p>Edad: {{apostador.edad}}</p>
-                                <p>ID: {{apostador.id}}</p> 
-                                <a href="{% url "info_apostador" apostador.id %}" class="enlace_apostador">Ver más</a> 
-                                <a href="{% url "eliminar_apostador" apostador.id %}" class="enlace_apostador">Eliminar</a>
-                            </div>
-                            {% endfor %}
+                    {% for apostador in apostadores %}
+                    <div class="contenedor_apostadores">
+                        <h3>Nombre: {{ apostador.nombre }}</h3>
+                        <p>Edad: {{ apostador.edad }}</p>
+                        <p>ID: {{ apostador.id }}</p>
+                        <a href="{% url 'info_apostador' apostador.id %}" class="enlace_apostador">Ver más</a>
+                        <a href="{% url 'eliminar_apostador' apostador.id %}" class="enlace_apostador">Eliminar</a>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>

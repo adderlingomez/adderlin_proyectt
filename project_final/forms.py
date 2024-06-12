@@ -1,16 +1,19 @@
 from django import forms
-from .models import apostadores, Caracteristica_apostadores
-
-
+from .models import Apostador, CaracteristicaApostador, ActualizacionApostador
 
 class FormRegistrarApostador(forms.ModelForm):
     class Meta:
-        model = apostadores
-
-        fields = ['nombre_apostador', 'edad', 'foto']
+        model = Apostador
+        fields = ['nombre', 'edad', 'foto']
 
 class FormCaracteristicaApostadores(forms.ModelForm):
     class Meta:
-        model = Caracteristica_apostadores
+        model = CaracteristicaApostador
+        fields = ['numero_juegos', 'ganadas_del_apostador']  # Corregido el nombre del campo
 
-        fields = ['numero_juegos', 'veces_perdi']
+        
+class FormActualizarApostador(forms.ModelForm):
+    class Meta:
+        model = ActualizacionApostador
+        fields = []
+

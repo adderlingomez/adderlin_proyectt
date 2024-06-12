@@ -1,26 +1,32 @@
 {% load static %}
 
-
-<div class="content div_navegacion">
-    <div  class="menu">
-        <nav>
-            <ul class="lista">
-                <li class="item">
-                    <a href="{% url "lo_mejor" %}" class="link">Lo mejor</a>
-                </li>
-                <li class="item">
-                    <a href="{% url "historias_beats" %}" class="link">Historias beats</a>
-                </li>
-                <li class="item">
-                    <a href="{% url "lista_apostadores" %}" class="link">Apostadores</a>
-                </li>
-                <li class="item">
-                    <a href="{% url "registrar_apostadores" %}" class="link">Registrar</a>
-                </li>
-                <li class="item">
-                    <a href="{% url 'logout' %}" class="link">logout</a>
-                </li>
-            </ul>
-        </nav>
+   
+    <div class="content div_navegacion">
+        <div  class="menu" >
+            <nav>
+                <ul class="lista">
+                    
+                    <li class="item">
+                        <a href="{% url "lo_mejor" %}" class="link">Lo mejor</a>
+                    </li>
+                    <li class="item">
+                        <a href="{% url "historias_beats" %}" class="link">Historias beats</a>
+                    </li>
+                    <li class="item">
+                        <a href="{% url "lista_apostadores" %}" class="link">Apostadores</a>
+                    </li>
+                    
+                    <li class="item">
+                        <a href="{% url "registrar_apostadores" %}" class="link">Registrar</a>
+                    </li>
+                    
+            
+                    <li class="item">
+                        <a href="{% url 'logout' %}" class="link">logout</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
+
